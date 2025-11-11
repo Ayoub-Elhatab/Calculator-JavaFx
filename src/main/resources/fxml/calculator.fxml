@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="application.Calculator"
-            stylesheets="/css/calculator.css"
-            prefWidth="410" prefHeight="580">
+<AnchorPane prefHeight="580" prefWidth="410" stylesheets="/css/calculator.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Calculator">
 
-    <BorderPane AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
-                AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+    <BorderPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
 
         <top>
-            <StackPane styleClass="display-container">
-                <Label fx:id="display"
-                       text="0"
-                       styleClass="display-text"
-                       StackPane.alignment="CENTER_RIGHT"/>
+            <StackPane styleClass="display-container" stylesheets="@../css/calculator.css">
+                <Label fx:id="display" styleClass="display-text" StackPane.alignment="CENTER_RIGHT" />
             </StackPane>
         </top>
 
         <center>
-            <GridPane hgap="10" vgap="10" styleClass="button-grid">
+            <GridPane hgap="10" prefHeight="343.0" prefWidth="410.0" styleClass="button-grid" stylesheets="@../css/calculator.css" vgap="10">
                 <columnConstraints>
-                    <ColumnConstraints percentWidth="25"/>
-                    <ColumnConstraints percentWidth="25"/>
-                    <ColumnConstraints percentWidth="25"/>
-                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
+                    <ColumnConstraints percentWidth="25" />
                 </columnConstraints>
 
-                <Button text="AC" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="btn, btn-gray"/>
-                <Button text="±"  GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="btn, btn-gray"/>
-                <Button text="%%" GridPane.rowIndex="0" GridPane.columnIndex="2" styleClass="btn, btn-gray"/>
-                <Button text="÷"  GridPane.rowIndex="0" GridPane.columnIndex="3" styleClass="btn, btn-orange"/>
+                <Button fx:id="clear" onAction="#handleButtonAction" styleClass="btn, btn-gray" stylesheets="@../css/calculator.css" text="AC" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Button fx:id="plusMinus" onAction="#handleButtonAction" styleClass="btn, btn-gray" text="±" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Button fx:id="percent" onAction="#handleButtonAction" styleClass="btn, btn-gray" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Button fx:id="divide" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="0" />
 
-                <Button text="7" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="btn, btn-dark"/>
-                <Button text="8" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="btn, btn-dark"/>
-                <Button text="9" GridPane.rowIndex="1" GridPane.columnIndex="2" styleClass="btn, btn-dark"/>
-                <Button text="×" GridPane.rowIndex="1" GridPane.columnIndex="3" styleClass="btn, btn-orange"/>
+                <Button fx:id="seven" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Button fx:id="eight" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="nine" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="multiply" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="×" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
-                <Button text="4" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="btn, btn-dark"/>
-                <Button text="5" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="btn, btn-dark"/>
-                <Button text="6" GridPane.rowIndex="2" GridPane.columnIndex="2" styleClass="btn, btn-dark"/>
-                <Button text="−" GridPane.rowIndex="2" GridPane.columnIndex="3" styleClass="btn, btn-orange"/>
+                <Button fx:id="four" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="4" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button fx:id="five" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="six" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="minus" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="−" GridPane.columnIndex="3" GridPane.rowIndex="2" />
 
-                <Button text="1" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="btn, btn-dark"/>
-                <Button text="2" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="btn, btn-dark"/>
-                <Button text="3" GridPane.rowIndex="3" GridPane.columnIndex="2" styleClass="btn, btn-dark"/>
-                <Button text="+" GridPane.rowIndex="3" GridPane.columnIndex="3" styleClass="btn, btn-orange"/>
+                <Button fx:id="one" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Button fx:id="two" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="three" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button fx:id="plus" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
-                <Button text="0" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
-                        maxWidth="Infinity" styleClass="btn, btn-dark, btn-wide"/>
-                <Button text="." GridPane.rowIndex="4" GridPane.columnIndex="2" styleClass="btn, btn-dark"/>
-                <Button text="=" GridPane.rowIndex="4" GridPane.columnIndex="3" styleClass="btn, btn-orange"/>
+                <Button fx:id="zero" maxWidth="Infinity" onAction="#handleButtonAction" styleClass="btn, btn-dark, btn-wide" text="0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                <Button fx:id="dot" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="equals" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
 
             </GridPane>
         </center>
