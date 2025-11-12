@@ -36,6 +36,7 @@ The project demonstrates good JavaFX controller structure, event handling, and U
 
 ---
 
+
 ## UI Preview
 
 ![Calculator UI](screenshots/screenshot.png)
