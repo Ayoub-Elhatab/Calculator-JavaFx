@@ -28,29 +28,29 @@
                     <ColumnConstraints percentWidth="25" />
                 </columnConstraints>
 
-                <Button fx:id="clear" onAction="#handleButtonAction" styleClass="btn, btn-gray" stylesheets="@../css/calculator.css" text="AC" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <Button fx:id="plusMinus" onAction="#handleButtonAction" styleClass="btn, btn-gray" text="±" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <Button fx:id="percent" onAction="#handleButtonAction" styleClass="btn, btn-gray" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                <Button fx:id="divide" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Button fx:id="clear" onAction="#onClear" styleClass="btn, btn-gray" stylesheets="@../css/calculator.css" text="AC" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Button fx:id="plusMinus" onAction="#onPlusMinus" styleClass="btn, btn-gray" text="±" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Button fx:id="percent" onAction="#onPercent" styleClass="btn, btn-gray" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Button fx:id="divide" onAction="#onOperation" styleClass="btn, btn-orange" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="0" />
 
-                <Button fx:id="seven" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <Button fx:id="eight" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Button fx:id="nine" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <Button fx:id="multiply" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="×" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button fx:id="seven" onAction="#onDigit" styleClass="btn, btn-dark" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Button fx:id="eight" onAction="#onDigit" styleClass="btn, btn-dark" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="nine" onAction="#onDigit" styleClass="btn, btn-dark" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="multiply" onAction="#onOperation" styleClass="btn, btn-orange" text="×" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
-                <Button fx:id="four" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="4" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <Button fx:id="five" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Button fx:id="six" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <Button fx:id="minus" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="−" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button fx:id="four" onAction="#onDigit" styleClass="btn, btn-dark" text="4" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button fx:id="five" onAction="#onDigit" styleClass="btn, btn-dark" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="six" onAction="#onDigit" styleClass="btn, btn-dark" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="minus" onAction="#onOperation" styleClass="btn, btn-orange" text="−" GridPane.columnIndex="3" GridPane.rowIndex="2" />
 
-                <Button fx:id="one" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                <Button fx:id="two" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Button fx:id="three" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                <Button fx:id="plus" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button fx:id="one" onAction="#onDigit" styleClass="btn, btn-dark" text="1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Button fx:id="two" onAction="#onDigit" styleClass="btn, btn-dark" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="three" onAction="#onDigit" styleClass="btn, btn-dark" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button fx:id="plus" onAction="#onOperation" styleClass="btn, btn-orange" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
-                <Button fx:id="zero" maxWidth="Infinity" onAction="#handleButtonAction" styleClass="btn, btn-dark, btn-wide" text="0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-                <Button fx:id="dot" onAction="#handleButtonAction" styleClass="btn, btn-dark" text="." GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                <Button fx:id="equals" onAction="#handleButtonAction" styleClass="btn, btn-orange" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button fx:id="zero" maxWidth="Infinity" onAction="#onDigit" styleClass="btn, btn-dark, btn-wide" text="0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                <Button fx:id="dot" onAction="#onDot" styleClass="btn, btn-dark" text="." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="equals" onAction="#onEquals" styleClass="btn, btn-orange" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
             <rowConstraints>
                <RowConstraints />
                <RowConstraints />
