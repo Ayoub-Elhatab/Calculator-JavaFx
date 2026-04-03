@@ -49,7 +49,7 @@ public class Calculator {
 
         switch (btn.getText()) {
             case "+" -> currentOperation = Operation.ADD;
-            case "-" -> currentOperation = Operation.SUB;
+            case "−" -> currentOperation = Operation.SUB;
             case "×" -> currentOperation = Operation.MUL;
             case "÷" -> currentOperation = Operation.DIV;
         }
