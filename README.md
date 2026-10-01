@@ -1,7 +1,6 @@
 # JavaFX Calculator
 
-A simple and clean calculator application built using **JavaFX**, **SceneBuilder**, and **IntelliJ IDEA**.  
-The project demonstrates good JavaFX controller structure, event handling, and UI separation using FXML.
+A simple and clean calculator application built using **JavaFX**, **SceneBuilder** .
 
 ---
 
